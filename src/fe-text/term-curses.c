@@ -67,6 +67,7 @@ static int init_curses(void)
 		return FALSE;
 
 	cbreak(); noecho(); idlok(stdscr, 1);
+	scrollok(stdscr, 1);
 #ifdef HAVE_CURSES_IDCOK
 	/*idcok(stdscr, 1); - disabled currently, causes redrawing problems with NetBSD */
 #endif
